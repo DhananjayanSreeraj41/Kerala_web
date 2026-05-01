@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kerala Tourism</title>
+
+  <!-- Google Fonts — two fonts used throughout the site -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+
+
+<!-- ═══════════════════════════════════════════
+     HOME PAGE
+     Everything the user sees first.
+     Hidden when a destination card is clicked.
+═══════════════════════════════════════════ -->
+<div id="home">
+
+  <!-- NAVBAR ──────────────────────────────── -->
+  <nav class="navbar">
+    <div class="logo">Kerala</div>
+    <ul class="nav-links">
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#experiences">Experiences</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO ─────────────────────────────────
+       To change the heading text, edit the
+       h1 tag below.
+  ────────────────────────────────────────── -->
+  <div class="hero">
+    <p class="hero-label"> EXPLORE SOUTH INDIA</p>
+    <h1>God's Own <em>Country</em></h1>
+    <p>From misty highland spice gardens to tranquil backwaters and ancient temples — Kerala is a world unto itself.</p>
+    <a href="#destinations" class="hero-btn">DISCOVER KERALA</a>
+  </div>
+
+  <!-- DESTINATIONS ─────────────────────────
+       Each <a class="card"> is one place.
+       onclick="open('alleppey')" links it to
+       the detail page with id="alleppey".
+  ────────────────────────────────────────── -->
+  <div class="section" id="destinations">
+    <p class="section-label">Where to go</p>
+    <h2>Iconic Destinations</h2>
+    <p class="section-desc">Each corner of Kerala offers a distinct landscape, culture, and soul. Choose your journey.</p>
+
+    <div class="card-grid">
+
+      <!-- Card 1 — Alleppey (featured, spans 2 columns) -->
+      <a class="card" href="#" onclick="openDetail('alleppey'); return false;">
+        <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=900&q=80" alt="Alleppey" />
+        <div class="card-text">
+          <span class="card-tag">Backwaters</span>
+          <h3>Alleppey</h3>
+          <p>Float through canals and lakes on a traditional houseboat, watching village life glide quietly by.</p>
+          <span class="card-link">Explore →</span>
+        </div>
+      </a>
+
+      <!-- Card 2 — Munnar -->
+      <a class="card" href="#" onclick="openDetail('munnar'); return false;">
+        <img src="https://images.unsplash.com/photo-1723709431768-d749b0d814b9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Munnar" />
+        <div class="card-text">
+          <span class="card-tag">Hill Station</span>
+          <h3>Munnar</h3>
+          <p>Rolling tea estates draped in mist at 1,600 m. Kerala's most beloved highland retreat.</p>
+          <span class="card-link">Explore →</span>
+        </div>
+      </a>
+
+      <!-- Card 3 — Thekkady -->
+      <a class="card" href="#" onclick="openDetail('thekkady'); return false;">
+        <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?w=700&q=80" alt="Thekkady" />
+        <div class="card-text">
+          <span class="card-tag">Wildlife</span>
+          <h3>Thekkady</h3>
+          <p>Periyar Tiger Reserve — boat safaris, spice trails, and encounters with wild elephants.</p>
+          <span class="card-link">Explore →</span>
+        </div>
+      </a>
+
+      <!-- Card 4 — Kovalam -->
+      <a class="card" href="#" onclick="openDetail('kovalam'); return false;">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&q=80" alt="Kovalam" />
+        <div class="card-text">
+          <span class="card-tag">Beaches</span>
+          <h3>Kovalam</h3>
+          <p>Crescent beaches framed by red cliffs, legendary Ayurveda retreats, and flaming sunsets.</p>
+          <span class="card-link">Explore →</span>
+        </div>
+      </a>
+
+      <!-- Card 5 — Wayanad -->
+      <a class="card" href="#" onclick="openDetail('wayanad'); return false;">
+        <img src="https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fwww.keralatourism.org%2Fwayanad%2Fwayanad.php&ved=0CBYQjRxqFwoTCJDWvOnbl5QDFQAAAAAdAAAAABAG&opi=89978449" alt="Wayanad" />
+        <div class="card-text">
+          <span class="card-tag">Nature</span>
+          <h3>Wayanad</h3>
+          <p>Ancient tribal lands, waterfalls, cave temples, and coffee forests stretching to the horizon.</p>
+          <span class="card-link">Explore →</span>
+        </div>
+      </a>
+
+      <!-- Card 6 — Fort Kochi -->
+      <a class="card" href="#" onclick="openDetail('fort-kochi'); return false;">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80" alt="Fort Kochi" />
+        <div class="card-text">
+          <span class="card-tag">Heritage</span>
+          <h3>Fort Kochi</h3>
+          <p>Portuguese churches, Chinese fishing nets, spice warehouses, and a thriving art scene.</p>
+          <span class="card-link">Explore →</span>
+        </div>
+      </a>
+
+      <!-- New card -->
+       <a class="card" href="#" onclick="openDetail('fort-kochi'); return false;">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80" alt="Fort Kochi" />
+        <div class="card-text">
+          <span class="card-tag">Heritage</span>
+          <h3>Fort Kochi</h3>
+          <p>Portuguese churches, Chinese fishing nets, spice warehouses, and a thriving art scene.</p>
+          <span class="card-link">Explore →</span>
+        </div>
+      </a>
+
+    </div>
+  </div><!-- end #destinations -->
+
+
+  <!-- STATS STRIP ──────────────────────────
+       To change a stat, just edit the
+       .stat-num and .stat-name text below.
+  ────────────────────────────────────────── -->
+  <div class="stats">
+    <div>
+      <div class="stat-num">44</div>
+      <div class="stat-name">Rivers</div>
+    </div>
+    <div>
+      <div class="stat-num">900km</div>
+      <div class="stat-name">Coastline</div>
+    </div>
+    <div>
+      <div class="stat-num">5</div>
+      <div class="stat-name">UNESCO Sites</div>
+    </div>
+    <div>
+      <div class="stat-num">3</div>
+      <div class="stat-name">Biosphere Reserves</div>
+    </div>
+  </div>
+
+
+  <!-- EXPERIENCES ──────────────────────────
+       To add a new experience, copy one
+       <div class="exp-card"> and paste it.
+  ────────────────────────────────────────── -->
+  <div class="section" id="experiences" style="background: var(--off-white);">
+    <p class="section-label">What to do</p>
+    <h2>Unforgettable Experiences</h2>
+    <p class="section-desc">Beyond the landscapes, Kerala offers rituals, flavours, and traditions found nowhere else.</p>
+
+    <div class="exp-grid">
+
+      <div class="exp-card">
+        <span class="exp-icon">🛶</span>
+        <h3>Houseboat Cruise</h3>
+        <p>Spend a night aboard a Kettuvallam drifting through Vembanad Lake under a canopy of stars.</p>
+      </div>
+
+      <div class="exp-card">
+        <span class="exp-icon">🌿</span>
+        <h3>Ayurveda</h3>
+        <p>Kerala is the birthplace of Ayurvedic medicine. Receive authentic Panchakarma treatments in certified retreats.</p>
+      </div>
+
+      <div class="exp-card">
+        <span class="exp-icon">🥥</span>
+        <h3>Kerala Cuisine</h3>
+        <p>Sadhya on banana leaf, Karimeen pollichathu, Puttu & Kadala — a culinary culture shaped by spice and coast.</p>
+      </div>
+
+      <div class="exp-card">
+        <span class="exp-icon">🎭</span>
+        <h3>Kathakali</h3>
+        <p>Witness Kerala's classical dance-drama — elaborate costumes and ancient storytelling.</p>
+      </div>
+
+      <div class="exp-card">
+        <span class="exp-icon">🐘</span>
+        <h3>Elephant Festivals</h3>
+        <p>Thrissur Pooram — decorated elephants, percussion orchestras, and fireworks.</p>
+      </div>
+
+      <div class="exp-card">
+        <span class="exp-icon">🧘</span>
+        <h3>Yoga & Wellness</h3>
+        <p>Retreat to a beachside ashram or a forest wellness centre. Kerala's healing traditions run centuries deep.</p>
+      </div>
+
+      <div class="exp-card">
+        <span class="exp-icon">🚵</span>
+        <h3>Trek & Cycle</h3>
+        <p>Traverse tea estates on foot or bike through trails from easy strolls to summit routes.</p>
+      </div>
+
+      <div class="exp-card">
+        <span class="exp-icon">🐆</span>
+        <h3>Wildlife Safari</h3>
+        <p>Spot tigers, leopards, and endemic birds across Periyar, Silent Valley, and Wayanad sanctuaries.</p>
+      </div>
+
+    </div>
+  </div><!-- end #experiences -->
+
+
+  <!-- FOOTER ──────────────────────────────── -->
+  <footer>
+    <div class="footer-logo">Kerala</div>
+    <p>God's Own Country · © 2025 Kerala Tourism</p>
+  </footer>
+
+</div><!-- end #home -->
+
+
+<!-- ═══════════════════════════════════════════
+     DETAIL PAGES
+     One per destination. All hidden by default.
+     openDetail() adds the "open" class to show one.
+     closeDetail() removes it to hide it.
+
+     HOW TO EDIT A DESTINATION:
+       1. Find the <div class="detail" id="NAME"> below
+       2. Change the background-image URL for a new photo
+       3. Edit the heading, intro text, spec-cards, or tips
+═══════════════════════════════════════════ -->
+
+
+<!-- ── ALLEPPEY ── -->
+<div class="detail" id="alleppey">
+
+  <div class="detail-banner">
+    <!-- Change this URL to use a different photo -->
+    <div class="detail-banner-photo" style="background-image: url('https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1400&q=85');"></div>
+    <button class="back-btn" onclick="closeDetail()">← Back</button>
+    <div class="banner-text">
+      <p class="banner-tag">Backwaters · Alappuzha</p>
+     <span class="malayalam" data-text="ആലപ്പുഴ">Alleppey</span><br>
+      <p>The Venice of the East</p>
+    </div>
+  </div>
+
+  <div class="detail-content">
+    <p class="detail-intro">Alleppey is Kerala's backwater jewel — a slow, shimmering world of canals, paddy fields, and coconut groves where the pace of life is governed by water. Board a traditional houseboat and let the stillness wash over you.</p>
+
+    <h2>What makes Alleppey special</h2>
+
+    <div class="spec-grid">
+
+      <div class="spec-card">
+        <span class="spec-icon">🛶</span>
+        <h3>Houseboat Stays</h3>
+        <p>Spend the night on a Kettuvallam — a rice boat converted into a floating villa with bedrooms and a sun deck.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🚣</span>
+        <h3>Nehru Trophy Boat Race</h3>
+        <p>Held every August, this iconic snake boat race draws massive crowds across Vembanad Lake.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🌾</span>
+        <h3>Kuttanad Paddy Fields</h3>
+        <p>One of the few places on earth where farming occurs below sea level. Vast emerald-green paddies.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🐦</span>
+        <h3>Bird Watching</h3>
+        <p>Pathiramanal Island in Vembanad is a sanctuary for kingfishers, egrets, and Indian darters.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🌅</span>
+        <h3>Sunset Cruises</h3>
+        <p>Drift through canals at dusk as the sky turns amber and the water mirrors a thousand shades of gold.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🥥</span>
+        <h3>Fresh Backwater Cuisine</h3>
+        <p>Karimeen pollichathu in banana leaf, fresh prawns, and coconut-laced curries are the local staples.</p>
+      </div>
+
+    </div>
+
+    <div class="tips-box">
+      <h3>Travel Tips</h3>
+      <ul>
+        <li>Best time: October to February. August is great for the Nehru Trophy Boat Race.</li>
+        <li>Book houseboats through ATDC for authentic, fair-priced options.</li>
+        <li>Hire a country boat for narrow canals — houseboats can't reach the prettiest spots.</li>
+        <li>Nearest airport: Cochin International Airport, 84 km away.</li>
+      </ul>
+    </div>
+  </div>
+
+</div><!-- end #alleppey -->
+
+
+<!-- ── MUNNAR ── -->
+<div class="detail" id="munnar">
+
+  <div class="detail-banner">
+    <div class="detail-banner-photo" style="background-image: url('https://images.unsplash.com/photo-1591609864468-5c694a9d4e1e?w=1400&q=85');"></div>
+    <button class="back-btn" onclick="closeDetail()">← Back</button>
+    <div class="banner-text">
+      <p class="banner-tag">Hill Station · Idukki</p>
+      <h1>Munnar</h1>
+      <p>Where Tea Meets the Clouds</p>
+    </div>
+  </div>
+
+  <div class="detail-content">
+    <p class="detail-intro">Munnar sits at 1,600 metres, draped in an endless quilt of tea gardens. The cool air carries the scent of cardamom, the slopes are an impossible shade of green, and misty mornings feel almost magical.</p>
+
+    <h2>What makes Munnar special</h2>
+
+    <div class="spec-grid">
+
+      <div class="spec-card">
+        <span class="spec-icon">🍵</span>
+        <h3>Tea Estates & Factories</h3>
+        <p>Walk through KDHP tea gardens and visit working factories to see the full journey from leaf to cup.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🌸</span>
+        <h3>Neelakurinji Blooms</h3>
+        <p>Once every 12 years, the hills turn violet with Neelakurinji flowers — a truly rare sight.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🦌</span>
+        <h3>Eravikulam National Park</h3>
+        <p>Home to the endangered Nilgiri Tahr, with some of the best high-altitude trekking in South India.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">💧</span>
+        <h3>Attukal Waterfalls</h3>
+        <p>Seasonal waterfalls that surge dramatically during monsoon, cutting through forested hillsides.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🌿</span>
+        <h3>Spice Gardens</h3>
+        <p>Guided tours through cardamom, pepper, and cinnamon gardens — the spices that put Kerala on the map.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🏕️</span>
+        <h3>Top Station Viewpoint</h3>
+        <p>At 1,880 m, sweeping views over the Tamil Nadu plains. On clear mornings visibility stretches for miles.</p>
+      </div>
+
+    </div>
+
+    <div class="tips-box">
+      <h3>Travel Tips</h3>
+      <ul>
+        <li>Best time: September to May. Avoid July–August for landslide risk.</li>
+        <li>Carry a jacket — nights can drop to 8–10°C even in winter.</li>
+        <li>Buy fresh tea directly from the KDHP factory shop.</li>
+        <li>Nearest airport: Cochin International Airport, 130 km away.</li>
+      </ul>
+    </div>
+  </div>
+
+</div><!-- end #munnar -->
+
+
+<!-- ── THEKKADY ── -->
+<div class="detail" id="thekkady">
+
+  <div class="detail-banner">
+    <div class="detail-banner-photo" style="background-image: url('https://images.unsplash.com/photo-1540553016722-983e48a2cd10?w=1400&q=85');"></div>
+    <button class="back-btn" onclick="closeDetail()">← Back</button>
+    <div class="banner-text">
+      <p class="banner-tag">Wildlife · Idukki</p>
+      <h1>Thekkady</h1>
+      <p>Into the Heart of Periyar</p>
+    </div>
+  </div>
+
+  <div class="detail-content">
+    <p class="detail-intro">Thekkady is the gateway to Periyar Tiger Reserve — one of India's finest wildlife sanctuaries. Dense forests, spice plantations, and the shimmering Periyar Lake all teem with life.</p>
+
+    <h2>What makes Thekkady special</h2>
+
+    <div class="spec-grid">
+
+      <div class="spec-card">
+        <span class="spec-icon">🐘</span>
+        <h3>Periyar Lake Boat Safari</h3>
+        <p>Glide through the sanctuary as elephants wade in and tigers occasionally emerge at the bank.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🐯</span>
+        <h3>Tiger Trail Trek</h3>
+        <p>An overnight trek inside the reserve with trained tribal guides — Kerala's most immersive wildlife experience.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🌶️</span>
+        <h3>Spice Village Tours</h3>
+        <p>Kumily town is Kerala's spice capital. Walk through cardamom and pepper estates with local guides.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🎪</span>
+        <h3>Kalaripayattu Shows</h3>
+        <p>Watch Kerala's ancient martial art performed live — acrobatic, hypnotic, and thousands of years old.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🪵</span>
+        <h3>Bamboo Rafting</h3>
+        <p>Float through interior forest on bamboo rafts with naturalist guides. Serene and unforgettable.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🐦</span>
+        <h3>Birdwatching</h3>
+        <p>Over 260 species recorded, including Malabar Trogon, Great Hornbill, and the Indian Pitta.</p>
+      </div>
+
+    </div>
+
+    <div class="tips-box">
+      <h3>Travel Tips</h3>
+      <ul>
+        <li>Book boat safaris early — the 7am slot offers the best wildlife sightings.</li>
+        <li>Tiger Trail permits must be booked weeks in advance through Kerala Forest Dept.</li>
+        <li>Best season: October to April.</li>
+        <li>Nearest airport: Madurai (Tamil Nadu), 140 km; Cochin, 190 km.</li>
+      </ul>
+    </div>
+  </div>
+
+</div><!-- end #thekkady -->
+
+
+<!-- ── KOVALAM ── -->
+<div class="detail" id="kovalam">
+
+  <div class="detail-banner">
+    <div class="detail-banner-photo" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400&q=85');"></div>
+    <button class="back-btn" onclick="closeDetail()">← Back</button>
+    <div class="banner-text">
+      <p class="banner-tag">Beaches · Thiruvananthapuram</p>
+      <h1>Kovalam</h1>
+      <p>Kerala's Jewel Coast</p>
+    </div>
+  </div>
+
+  <div class="detail-content">
+    <p class="detail-intro">Kovalam's three crescent beaches offer calm swimming waters, dramatic red cliff sunsets, and world-class Ayurvedic wellness centres all in one place.</p>
+
+    <h2>What makes Kovalam special</h2>
+
+    <div class="spec-grid">
+
+      <div class="spec-card">
+        <span class="spec-icon">🌊</span>
+        <h3>Lighthouse Beach</h3>
+        <p>The most popular stretch, guarded by a working red-and-white lighthouse. Safe swimming and a lively promenade.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🌿</span>
+        <h3>Ayurveda Retreats</h3>
+        <p>Kerala's highest concentration of authentic Ayurvedic resorts. 7–21 day Panchakarma programmes available.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🏄</span>
+        <h3>Surfing</h3>
+        <p>November to March brings consistent swells ideal for beginner and intermediate surfers.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🐟</span>
+        <h3>Fresh Seafood</h3>
+        <p>Choose your fish from the morning catch and have it grilled at a beach shack. Kerala masala fish fry is exceptional.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🏛️</span>
+        <h3>Padmanabhaswamy Temple</h3>
+        <p>17 km away — the wealthiest temple on earth, with stunning Dravidian architecture.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🌅</span>
+        <h3>Vizhinjam Rock Cave</h3>
+        <p>8th-century rock-cut cave temple carved into a cliff face near the beach. An unexpected ancient gem.</p>
+      </div>
+
+    </div>
+
+    <div class="tips-box">
+      <h3>Travel Tips</h3>
+      <ul>
+        <li>Best season: October to March. Avoid monsoon — currents make swimming dangerous.</li>
+        <li>Red flags on the beach mean no swimming — always follow lifeguard warnings.</li>
+        <li>Book Ayurveda programmes with AYUSH-certified resorts to avoid scams.</li>
+        <li>Nearest airport: Trivandrum International Airport, just 13 km away.</li>
+      </ul>
+    </div>
+  </div>
+
+</div><!-- end #kovalam -->
+
+
+<!-- ── WAYANAD ── -->
+<div class="detail" id="wayanad">
+
+  <div class="detail-banner">
+    <div class="detail-banner-photo" style="background-image: url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=1400&q=85');"></div>
+    <button class="back-btn" onclick="closeDetail()">← Back</button>
+    <div class="banner-text">
+      <p class="banner-tag">Nature · Northern Kerala</p>
+      <span class="malayalam" data-text="വയനാട്">Wayanad</span><br>
+      <p>The Green Sanctuary</p>
+    </div>
+  </div>
+
+  <div class="detail-content">
+    <p class="detail-intro">Wayanad is Kerala's northern secret — evergreen forests, tribal hamlets, prehistoric cave temples, cascading waterfalls, and coffee-scented air. Less touristed than Munnar, more raw, more real.</p>
+
+    <h2>What makes Wayanad special</h2>
+
+    <div class="spec-grid">
+
+      <div class="spec-card">
+        <span class="spec-icon">🦋</span>
+        <h3>Chembra Peak Trek</h3>
+        <p>Kerala's highest trekking peak at 2,100 m, famous for the heart-shaped lake near the summit.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🏛️</span>
+        <h3>Edakkal Caves</h3>
+        <p>Neolithic rock carvings 6,000 years old, etched into cave walls above a mist-shrouded valley.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">💦</span>
+        <h3>Soochipara Waterfalls</h3>
+        <p>A three-tiered waterfall plunging into a natural pool surrounded by dense forest.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">☕</span>
+        <h3>Coffee & Spice Estates</h3>
+        <p>Wayanad produces some of India's finest coffee. Stay in a plantation homestay and wake to fresh bloom scents.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🐘</span>
+        <h3>Wayanad Wildlife Sanctuary</h3>
+        <p>Part of one of South Asia's largest biosphere reserves. Elephant corridors cross the entire district.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🏡</span>
+        <h3>Tribal Homestays</h3>
+        <p>Stay with Kurichiya or Paniya tribal communities and learn about traditional forest knowledge and cooking.</p>
+      </div>
+
+    </div>
+
+    <div class="tips-box">
+      <h3>Travel Tips</h3>
+      <ul>
+        <li>Best time: October to May. Monsoon makes trails slippery but forests look extraordinary.</li>
+        <li>Chembra Peak requires a forest department permit — get it at Meppadi range office early morning.</li>
+        <li>Best explored by car or bike — distances between attractions are significant.</li>
+        <li>Nearest airport: Calicut International Airport (Kozhikode), 85 km away.</li>
+      </ul>
+    </div>
+  </div>
+
+</div><!-- end #wayanad -->
+
+
+<!-- ── FORT KOCHI ── -->
+<div class="detail" id="fort-kochi">
+
+  <div class="detail-banner">
+    <div class="detail-banner-photo" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=85');"></div>
+    <button class="back-btn" onclick="closeDetail()">← Back</button>
+    <div class="banner-text">
+      <p class="banner-tag">Heritage · Ernakulam</p>
+      <h1>Fort Kochi</h1>
+      <p>Where Cultures Converge</p>
+    </div>
+  </div>
+
+  <div class="detail-content">
+    <p class="detail-intro">Fort Kochi is Kerala's most cosmopolitan corner — a peninsula shaped by Arab, Portuguese, Dutch, and British presence. Cobbled lanes, colonial villas, ancient synagogues, Chinese fishing nets, and a world-class art scene all coexist here.</p>
+
+    <h2>What makes Fort Kochi special</h2>
+
+    <div class="spec-grid">
+
+      <div class="spec-card">
+        <span class="spec-icon">🎣</span>
+        <h3>Chinese Fishing Nets</h3>
+        <p>The iconic cantilevered nets silhouetted against Arabian Sea sunsets — the defining image of Kerala's coast.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">⛪</span>
+        <h3>St. Francis Church</h3>
+        <p>India's oldest European church (1503), built by the Portuguese. Vasco da Gama was once buried here.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🎨</span>
+        <h3>Kochi-Muziris Biennale</h3>
+        <p>Asia's largest contemporary art festival, held every two years across Fort Kochi's heritage buildings.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🕍</span>
+        <h3>Paradesi Synagogue</h3>
+        <p>The oldest active synagogue in the Commonwealth (1568). Hand-painted Chinese tiles cover the floor.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🌶️</span>
+        <h3>Spice Markets</h3>
+        <p>The warehouses of Mattancherry still trade in pepper, cardamom, and cinnamon.</p>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🎭</span>
+        <h3>Kerala Folklore Museum</h3>
+        <p>Three storeys housing over 4,000 artefacts representing Kerala's tribal, folk, and classical art heritage.</p>
+      </div>
+
+    </div>
+
+    <div class="tips-box">
+      <h3>Travel Tips</h3>
+      <ul>
+        <li>Best explored on foot or by rented bicycle — lanes are narrow and distances are small.</li>
+        <li>Take the ferry from Ernakulam Jetty for a scenic 10-minute crossing.</li>
+        <li>Kathakali performances are held nightly at Kerala Kathakali Centre — book ahead in season.</li>
+        <li>Nearest airport: Cochin International Airport, 35 km away.</li>
+      </ul>
+    </div>
+  </div>
+
+</div><!-- end #fort-kochi -->
+
+
+<!-- ═══════════════════════════════════════════
+     JAVASCRIPT
+     Just two functions:
+
+     openDetail(id)
+       — hides the home page
+       — shows the detail page with that id
+
+     closeDetail()
+       — hides all detail pages
+       — shows the home page again
+═══════════════════════════════════════════ -->
+<script>
+
+  // Called when a destination card is clicked
+  function openDetail(id) {
+    // Hide the home page
+    document.getElementById('home').classList.add('hidden');
+
+    // Make sure all detail pages are closed first
+    document.querySelectorAll('.detail').forEach(function(page) {
+      page.classList.remove('open');
+    });
+
+    // Open only the one that was clicked
+    document.getElementById(id).classList.add('open');
+
+    // Jump to the top of the page
+    window.scrollTo(0, 0);
+  }
+
+  // Called when the "← Back" button is clicked
+  function closeDetail() {
+    // Close all detail pages
+    document.querySelectorAll('.detail').forEach(function(page) {
+      page.classList.remove('open');
+    });
+
+    // Show the home page again
+    document.getElementById('home').classList.remove('hidden');
+
+    // Jump to the top of the page
+    window.scrollTo(0, 0);
+  }
+
+</script>
+
+</body>
+</html>

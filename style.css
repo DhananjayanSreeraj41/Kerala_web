@@ -1,0 +1,591 @@
+
+    /* ─────────────────────────────────────────
+       COLOUR PALETTE
+       Change these values to re-colour the site.
+       Every colour used below comes from here.
+    ───────────────────────────────────────── */
+    :root {
+      --dark-green : #1a3a2a;
+      --light-green: #52b788;
+      --gold       : #c9a84c;
+      --pale-gold  : #f0d08a;
+      --cream      : #faf7f0;
+      --off-white  : #f0ebe0;
+      --white      : #ffffff;
+      --grey-text  : #4a4a42;
+    }
+
+    /* ─────────────────────────────────────────
+       RESET
+       Removes default browser spacing so things
+       look the same in every browser.
+    ───────────────────────────────────────── */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ─────────────────────────────────────────
+       BASE STYLES
+       Applied to the whole page.
+    ───────────────────────────────────────── */
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--grey-text);
+    }
+
+    /* Makes scroll smooth haha */
+    html{
+      scroll-behavior: smooth;
+    }
+
+    /* All headings use the fancy serif font */
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      color: var(--dark-green);
+    }
+
+    /* ─────────────────────────────────────────
+       NAVBAR
+       The bar fixed to the top of the page.
+    ───────────────────────────────────────── */
+    .navbar {
+      background: var(--dark-green);
+      padding: 1.2rem 3rem;
+      display: flex;                   /* puts logo and links side by side */
+      align-items: center;
+      justify-content: space-between;  /* logo on left, links on right */
+    }
+
+    /* The "Kerala" text on the left */
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      color: var(--pale-gold);
+    }
+
+    /* The nav links on the right */
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+    }
+
+    .nav-links a:hover {
+      color: var(--pale-gold);
+    }
+
+    /* ─────────────────────────────────────────
+       HERO SECTION
+       The big opening banner.
+    ───────────────────────────────────────── */
+    .hero {
+      background: var(--dark-green);
+      text-align: center;
+      padding: 6rem 2rem 5rem;
+    }
+
+    /* Small label above the main heading */
+    .hero-label {
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: 5rem;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 1.2rem;
+    }
+
+    /* The italic golden word inside the heading */
+    .hero h1 em {
+      font-style: italic;
+      color: var(--pale-gold);
+    }
+
+    .hero p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 1rem;
+      font-weight: 300;
+      max-width: 460px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+
+    /* The "Discover Kerala" button */
+    .hero-btn {
+      display: inline-block;
+      padding: 0.8rem 2.2rem;
+      border: 1px solid var(--gold);
+      color: var(--pale-gold);
+      text-decoration: none;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+    }
+
+    .hero-btn:hover {
+      background: var(--gold);
+      color: var(--dark-green);
+    }
+
+    /* ─────────────────────────────────────────
+       SECTION WRAPPER
+       A padded box used by Destinations and
+       Experiences sections.
+    ───────────────────────────────────────── */
+    .section {
+      padding: 5rem 3rem;
+    }
+
+    /* Small green label above section headings */
+    .section-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--light-green);
+      margin-bottom: 0.5rem;
+    }
+
+    .section h2 {
+      font-size: 2.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    /* The paragraph right below the section heading */
+    .section-desc {
+      font-size: 1rem;
+      font-weight: 300;
+      max-width: 500px;
+      line-height: 1.75;
+      margin-bottom: 3rem;
+    }
+
+    /* ─────────────────────────────────────────
+       DESTINATION CARDS
+       A 3-column grid of clickable place cards.
+    ───────────────────────────────────────── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);  /* 4 equal columns */
+      gap: 1.5rem;
+    }
+
+    /* The first card spans 2 columns to look bigger / featured */
+    .card-grid .card:first-child {
+      grid-column: span 2;
+    }
+
+    /* Each individual card */
+    .card {
+      background: var(--white);
+      text-decoration: none;  /* removes underline from the <a> tag */
+      color: inherit;          /* uses the body text colour, not blue link colour */
+      display: block;
+      cursor: pointer;
+      transition: transform 0.25s, box-shadow 0.25s;  /* smooth hover animation */
+    }
+
+    .card:hover {
+      transform: translateY(-5px);                        /* lifts the card up */
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);       /* adds a shadow */
+    }
+
+    /* Photo inside each card */
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;   /* crops the image to fill the box neatly */
+      display: block;
+    }
+
+    /* The featured first card gets a taller photo */
+    .card-grid .card:first-child img {
+      height: 270px;
+    }
+
+    /* Text area below the photo */
+    .card-text {
+      padding: 1.4rem 1.6rem 1.8rem;
+    }
+
+    /* Small coloured category label e.g. "Backwaters" */
+    .card-tag {
+      font-size: 0.65rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--light-green);
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    .card-text h3 {
+      font-size: 1.6rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .card-text p {
+      font-size: 0.87rem;
+      font-weight: 300;
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+
+    /* "Explore →" text at the bottom of each card */
+    .card-link {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--dark-green);
+      font-weight: 500;
+    }
+
+    /* ─────────────────────────────────────────
+       STATS STRIP
+       The 4 numbers section between destinations
+       and experiences.
+    ───────────────────────────────────────── */
+    .stats {
+      background: var(--dark-green);
+      padding: 4rem 3rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);  /* 4 equal columns */
+      text-align: center;
+      gap: 1rem;
+    }
+
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      color: var(--pale-gold);
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .stat-name {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.45);
+    }
+
+    /* ─────────────────────────────────────────
+       EXPERIENCE CARDS
+       The 8 smaller cards in the Experiences
+       section.
+    ───────────────────────────────────────── */
+    .exp-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);  /* 4 columns */
+      gap: 1.2rem;
+    }
+
+    .exp-card {
+      background: var(--white);
+      padding: 1.75rem 1.5rem;
+      border-top: 3px solid var(--light-green);  /* coloured top border */
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .exp-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-4px);
+    }
+
+    /* The emoji icon at the top of each exp card */
+    .exp-icon {
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .exp-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .exp-card p {
+      font-size: 0.84rem;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    /* ─────────────────────────────────────────
+       FOOTER
+    ───────────────────────────────────────── */
+    footer {
+      background: var(--dark-green);
+      text-align: center;
+      padding: 3.5rem 2rem;
+    }
+
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      color: var(--pale-gold);
+      margin-bottom: 0.5rem;
+    }
+
+    footer p {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.25);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* ─────────────────────────────────────────
+       DETAIL PAGES
+       Hidden by default. Shown when a card is
+       clicked. Each destination has one.
+    ───────────────────────────────────────── */
+
+    /* All detail pages are hidden unless they have the .open class */
+    .detail {
+      display: none;
+    }
+
+    .detail.open {
+      display: block;
+    }
+
+    /* Big photo banner at the top of each detail page */
+    .detail-banner {
+      height: 55vh;
+      min-height: 360px;
+      position: relative;      /* needed so child elements can be positioned inside */
+      display: flex;
+      align-items: flex-end;   /* push text to the bottom of the banner */
+      padding: 2.5rem 3rem;
+    }
+
+    /* The background photo — sits behind everything else */
+    .detail-banner-photo {
+      position: absolute;
+      inset: 0;                         /* stretches to fill .detail-banner */
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.5);          /* darkens the photo so text is readable */
+    }
+
+    /* Experimental */
+      .malayalam {
+      font-size: 2.5rem;
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+      color: rgb(254, 254, 254);
+      transition: color 0.2s ease;
+      padding: 0 10px; /* adds breathing room */
+    }
+
+    /* Sliding background */
+    .malayalam::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 0%;
+      background-color: #1a3a2a;
+      z-index: -1;
+      transition: width 0.3s ease;
+    }
+
+    .malayalam:hover::after {
+      width: 100%;
+    }
+
+    /* Malayalam text layer */
+    .malayalam::before {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      color: var(--gold);
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+
+    /* Hover text swap */
+    .malayalam:hover {
+      color: transparent;
+    }
+
+    .malayalam:hover::before {
+      transform: translateX(0);
+    }
+
+    .malayalam:hover::after{
+      width: 200px;
+      color:var(--light-green)
+    }
+
+    /* "← Back" button in the top-left corner */
+    .back-btn {
+      position: absolute;
+      top: 1.5rem;
+      left: 3rem;
+      background: rgba(0, 0, 0, 0.35);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      cursor: pointer;
+      letter-spacing: 0.06em;
+      z-index: 2;               /* sits above the photo */
+    }
+
+    .back-btn:hover {
+      background: var(--dark-green);
+      color: var(--gold);
+    }
+
+    /* The heading text at the bottom of the banner */
+    .banner-text {
+      position: relative;
+      z-index: 1;               /* sits above the photo */
+    }
+
+    /* Small gold tag e.g. "Backwaters · Alappuzha" */
+    .banner-tag {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+
+    .banner-text h1 {
+      font-size: 3.5rem;
+      color: white;
+      line-height: 1.1;
+    }
+
+    .banner-text p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 1rem;
+      font-weight: 300;
+    }
+
+    /* The content area below the photo */
+    .detail-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3.5rem 3rem;
+    }
+
+    /* Opening paragraph */
+    .detail-intro {
+      font-size: 1.08rem;
+      line-height: 1.8;
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+      max-width: 640px;
+    }
+
+    .detail-content h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Grid of speciality cards */
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .spec-card {
+      background: var(--white);
+      padding: 1.5rem;
+      border-left: 3px solid var(--light-green);  /* green left accent */
+    }
+
+    .spec-card:hover{
+      background-color: var(--dark-green);
+      color: var(--gold);
+
+    transition: 
+      transform 0.3s ease,
+      box-shadow 0.3s ease,
+      background-color 0.3s ease,
+      color 0.3s ease;
+
+      box-shadow: 0 0 15px rgba(40, 206, 40, 0.5); /* gold glow */
+      }
+
+    .spec-icon {
+      font-size: 1.4rem;
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+
+    .spec-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.35rem;
+      color: var(--pale-gold)
+    }
+
+    .spec-card p {
+      font-size: 0.84rem;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    /* Dark green tips box at the bottom */
+    .tips-box {
+      background: var(--dark-green);
+      padding: 2rem 2.5rem;
+      color: white;
+    }
+
+    .tips-box h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--pale-gold);
+      margin-bottom: 1rem;
+    }
+
+    .tips-box ul {
+      list-style: none;
+    }
+
+    .tips-box li {
+      font-size: 0.87rem;
+      color: rgba(255, 255, 255, 0.7);
+      padding: 0.3rem 0 0.3rem 1.2rem;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    /* The "—" dash before each tip */
+    .tips-box li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+    }
+
+    /* ─────────────────────────────────────────
+       UTILITY
+       A simple class to hide any element.
+    ───────────────────────────────────────── */
+    .hidden {
+      display: none !important;
+    }
