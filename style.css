@@ -127,7 +127,7 @@
 
     /* The "Discover Kerala" button */
     .hero-btn {
-      display: inline-block;
+      /* display: inline-block; */
       padding: 0.8rem 2.2rem;
       border: 1px solid var(--gold);
       color: var(--pale-gold);
@@ -280,6 +280,39 @@
       text-transform: uppercase;
       color: rgba(255, 255, 255, 0.45);
     }
+    /* Tharak Gopal special */
+    .container{
+      display: flex;
+      gap: 2rem;
+      background-color: var(--pale-gold);
+      padding-left: 100px;
+      padding-bottom: 100px; 
+    }
+
+
+    .box{
+      border: 2px solid black;
+      height:400px;
+      width:400px;
+      margin-top: 100px;
+      text-decoration: none;
+      position:relative;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    /* .text{
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 100;
+      position: absolute;
+      bottom:0;
+      font-size: 1.5rem;
+      color:#1a3a2a;
+      /* border: 2px solid black; */
+      /* height: 100px;
+      width:200px;
+      padding: 30px 40px; */
+     */
 
     /* ─────────────────────────────────────────
        EXPERIENCE CARDS
@@ -589,3 +622,684 @@
     .hidden {
       display: none !important;
     }
+
+    /* forms */
+    .page-header {
+      background: var(--dark-green);
+      text-align: center;
+      padding: 4rem 2rem 3.5rem;
+    }
+
+    .page-header-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+
+    .page-header h1 {
+      font-size: 3.5rem;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+    }
+
+    .page-header h1 em {
+      font-style: italic;
+      color: var(--pale-gold);
+    }
+
+    .page-header p {
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.95rem;
+      font-weight: 300;
+      max-width: 420px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ─────────────────────────────────────────
+       MAIN LAYOUT
+       Two columns side by side:
+         Left  — info boxes
+         Right — the form
+    ───────────────────────────────────────── */
+    .contact-wrapper {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 5rem 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;  /* info column is narrower */
+      gap: 4rem;
+      align-items: start;
+    }
+
+    /* ─────────────────────────────────────────
+       LEFT COLUMN — contact info
+    ───────────────────────────────────────── */
+
+    .info-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--light-green);
+      margin-bottom: 0.5rem;
+    }
+
+    .info-heading {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      line-height: 1.15;
+    }
+
+    .info-desc {
+      font-size: 0.92rem;
+      font-weight: 300;
+      line-height: 1.75;
+      margin-bottom: 2.5rem;
+    }
+
+    /* Each contact detail block e.g. Phone, Email */
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* The emoji icon on the left */
+    .info-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .info-item h3 {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--light-green);
+      margin-bottom: 0.25rem;
+    }
+
+    .info-item p {
+      font-size: 0.88rem;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    /* Thin gold divider line between info and form */
+    .info-divider {
+      width: 40px;
+      height: 2px;
+      background: var(--gold);
+      margin: 2rem 0;
+    }
+
+    /* "Quick facts" box at the bottom of the left column */
+    .quick-facts {
+      background: var(--dark-green);
+      padding: 1.5rem 1.75rem;
+    }
+
+    .quick-facts h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--pale-gold);
+      margin-bottom: 0.75rem;
+    }
+
+    .quick-facts ul {
+      list-style: none;
+    }
+
+    .quick-facts li {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.65);
+      padding: 0.3rem 0 0.3rem 1rem;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    /* Gold dash before each list item */
+    .quick-facts li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+    }
+
+    /* ─────────────────────────────────────────
+       RIGHT COLUMN — the form
+    ───────────────────────────────────────── */
+    .form-box {
+      background: var(--white);
+      padding: 2.5rem;
+    }
+
+    .form-box h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .form-box > p {
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--grey-text);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    /* Each label + input pair */
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    /* The label above each input */
+    .form-group label {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--dark-green);
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+    }
+
+    /* All text inputs and the textarea share the same style */
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--off-white);
+      background: var(--cream);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: var(--grey-text);
+      outline: none;                    /* removes default browser outline */
+      transition: border-color 0.2s;   /* smooth colour change on focus */
+    }
+
+    /* Highlight the border when the user clicks into a field */
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--light-green);
+      background: var(--white);
+    }
+
+    /* Textarea is taller than regular inputs */
+    .form-group textarea {
+      height: 130px;
+      resize: vertical;   /* lets the user resize it up/down only */
+    }
+
+    /* Two inputs side by side (First name + Last name) */
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    /* The submit button */
+    .submit-btn {
+      width: 100%;
+      padding: 1rem;
+      background: var(--dark-green);
+      color: var(--pale-gold);
+      border: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      transition: background 0.2s;
+    }
+
+    .submit-btn:hover {
+      background: var(--gold);
+      color: var(--dark-green);
+    }
+
+    /* ─────────────────────────────────────────
+       SUCCESS MESSAGE
+       Hidden by default. Shown after submit.
+    ───────────────────────────────────────── */
+    .success-msg {
+      display: none;          /* hidden until form is submitted */
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+    }
+
+    .success-msg .success-icon {
+      font-size: 3rem;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .success-msg h3 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .success-msg p {
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: var(--grey-text);
+      line-height: 1.7;
+    }
+
+    /* ─────────────────────────────────────────
+       FOOTER — same as main site
+    ───────────────────────────────────────── */
+    footer {
+      background: var(--dark-green);
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      color: var(--pale-gold);
+      margin-bottom: 0.5rem;
+    }
+
+    footer p {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.25);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* ─────────────────────────────────────────
+       MEDIA QUERIES
+    ───────────────────────────────────────── */
+
+/* ── Laptop / small desktop (≤ 1024px) ──────────── */
+@media (max-width: 1024px) {
+
+    /* Navbar */
+    .navbar {
+        padding: 1rem 2rem;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 5rem 2rem 4rem;
+    }
+
+    .hero h1 {
+        font-size: 3.8rem;
+    }
+
+    /* Section wrapper */
+    .section {
+        padding: 4rem 2rem;
+    }
+
+    /* Destination cards */
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Category cards */
+    .cat-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cat-grid .card:first-child {
+        grid-column: span 1;
+    }
+
+    /* Stats strip */
+    .stats {
+        padding: 3rem 2rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Experience grid */
+    .exp-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Detail page */
+    .detail-content {
+        padding: 3rem 2rem;
+    }
+
+    /* Spec grid */
+    .spec-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Banner */
+    .detail-banner {
+        padding: 2rem;
+    }
+
+    .back-btn {
+        left: 2rem;
+    }
+
+    /* 4 feature boxes */
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .box {
+        width: calc(50% - 1rem);
+        max-width: 400px;
+        height: 320px;
+
+        margin-top: 2rem;
+    }
+}
+
+
+/* ── Tablet (≤ 768px) ───────────────────── */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1rem 1.5rem;
+        text-align: center;
+    }
+
+    .nav-links {
+        gap: 1.25rem;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 4rem 1.5rem 3.5rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    /* Section wrapper */
+    .section {
+        padding: 3.5rem 1.5rem;
+    }
+
+    .section h2 {
+        font-size: 2.1rem;
+    }
+
+    /* Destination cards */
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-grid .card:first-child {
+        grid-column: span 1;
+    }
+
+    .card-grid .card:first-child img {
+        height: 220px;
+    }
+
+    /* Category cards */
+    .cat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Stats */
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2.5rem 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .stat-num {
+        font-size: 2.4rem;
+    }
+
+    /* Experience grid */
+    .exp-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    /* Detail banner */
+    .detail-banner {
+        height: 45vh;
+        min-height: 280px;
+        padding: 1.5rem;
+    }
+
+    .back-btn {
+        top: 1rem;
+        left: 1.5rem;
+    }
+
+    .banner-text h1 {
+        font-size: 2.6rem;
+    }
+
+    .malayalam {
+        font-size: 2rem;
+    }
+
+    /* Detail content */
+    .detail-content {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .detail-intro {
+        font-size: 1rem;
+    }
+
+    .detail-content h2 {
+        font-size: 1.7rem;
+    }
+
+    /* Spec grid */
+    .spec-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Tips box */
+    .tips-box {
+        padding: 1.5rem;
+    }
+
+    /* 4 feature boxes */
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        gap: 1rem;
+
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .box {
+        width: calc(50% - 0.5rem);
+        height: 260px;
+
+        margin-top: 1rem;
+    }
+
+    .text {
+        font-size: 1.2rem;
+        padding: 1.25rem;
+    }
+}
+
+
+/* ── Mobile (≤ 480px) ───────────────────── */
+@media (max-width: 480px) {
+
+    /* Navbar */
+    .navbar {
+        padding: 0.9rem 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 3.5rem 1rem 3rem;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-label {
+        font-size: 0.7rem;
+    }
+
+    /* Section wrapper */
+    .section {
+        padding: 3rem 1rem;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Cards */
+    .card-grid {
+        gap: 1rem;
+    }
+
+    /* Stats */
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem 1rem;
+    }
+
+    .stat-num {
+        font-size: 2rem;
+    }
+
+    .stat-name {
+        font-size: 0.7rem;
+    }
+
+    /* Experience grid */
+    .exp-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Detail banner */
+    .detail-banner {
+        height: 40vh;
+        min-height: 240px;
+        padding: 1rem;
+    }
+
+    .back-btn {
+        top: 0.75rem;
+        left: 1rem;
+
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .banner-text h1 {
+        font-size: 2rem;
+    }
+
+    .banner-text p {
+        font-size: 0.88rem;
+    }
+
+    .malayalam {
+        font-size: 1.7rem;
+    }
+
+    /* Detail content */
+    .detail-content {
+        padding: 2rem 1rem;
+    }
+
+    .detail-intro {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+    }
+
+    .detail-content h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Spec grid */
+    .spec-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Tips */
+    .tips-box {
+        padding: 1.25rem 1rem;
+    }
+
+    .tips-box h3 {
+        font-size: 1.2rem;
+    }
+
+    .tips-box li {
+        font-size: 0.82rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 2.5rem 1rem;
+    }
+
+    .footer-logo {
+        font-size: 1.5rem;
+    }
+
+    /* 4 feature boxes */
+    .container {
+        flex-direction: column;
+        align-items: center;
+
+        gap: 1rem;
+
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .box {
+        width: 100%;
+        max-width: 350px;
+        height: 240px;
+
+        margin-top: 0;
+    }
+
+    .text {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
+
