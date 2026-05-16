@@ -87,8 +87,8 @@ The website is optimized for:
 ## Author
 
 Made by:
- **Tharak Gopal**
- **Sreyak S**
- **Dhananjayan Sreeraj**
+ **Tharak Gopal**, 
+ **Sreyak S**, 
+ **Dhananjayan Sreeraj**, 
  **Hari Sankar V**
 
